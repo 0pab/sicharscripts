@@ -19,4 +19,21 @@ public class BowlingAlley : MonoBehaviour
             rigidBody.AddForce(transform.forward * forwardForce, ForceMode.Impulse);
         }
     }
+
+    public void MoveLeft()
+    {
+        if (transform.position.x > leftBarrier)
+        {
+            transform.position += new Vector3(-moveIncrement, 0, 0);
+        }
+    }
+
+    public void MoveRight()
+    {
+        if (transform.position.x < rightBarrier)
+        {
+            transform.position += new Vector3(moveIncrement, 0, 0);
+        }
+    }
+
 }
