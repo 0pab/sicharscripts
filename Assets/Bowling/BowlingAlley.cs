@@ -13,6 +13,7 @@ public class BowlingAlley : MonoBehaviour
 
     public void Bowl()
     {
+        //Ejemplo
         if (rigidBody != null)
         {
             rigidBody.AddForce(transform.forward * forwardForce, ForceMode.Impulse);
